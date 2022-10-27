@@ -1,0 +1,205 @@
+/* .head{
+    display: flex;
+} */
+*{
+    margin: 0px;
+    padding: 0px;
+    
+   
+    /* text-transform: capitalize; */
+}
+body{
+   
+    padding: auto;
+    padding-bottom:10%;
+   
+}
+.container{
+    margin-top:10px ;
+   
+}
+.head h1{
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 40px;
+  
+    
+}
+.head{
+   
+    color:#393939;
+}
+span{
+    font-size: small;
+    
+}
+.input-field input{
+    margin-top: 9px;
+    margin-right: 100px;
+    padding: 15px 0px;
+    padding-right: 350px;
+    padding-left:40px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px rgb(163, 160, 160);
+    text-transform: lowercase;
+   
+}
+.inputArea{
+    text-align:right;
+    margin-top:20px  ;
+
+ 
+}
+/* styling for button */
+.btn{
+    
+   
+}
+/* .btn button{
+    padding:5px  40px;
+    border:none;
+    margin-bottom: 10px ;
+    box-shadow: 5px 5px 10px rgb(163, 160, 160);
+    text-transform: uppercase;
+} */
+/* find button */
+.find{
+    background-color: #0049B7 ; 
+    color: aliceblue;
+    padding:5px  63px;
+    border:none;
+    margin-top: 0px;
+    margin-bottom: 15px ;
+    box-shadow: 5px 5px 10px rgb(163, 160, 160);
+    text-transform: uppercase;
+    
+}
+.find:hover{
+    color:black;
+    background-color:aliceblue;
+    font-weight:700;
+    
+}
+.refresh{
+    background-color: #0049B7 ; 
+    color: aliceblue;
+    padding:5px  40px;
+    border:none;
+    box-shadow: 5px 5px 10px rgb(163, 160, 160);
+    text-transform: uppercase;
+}
+.refresh:hover{
+    color:black;
+    background-color:aliceblue;
+    font-weight:700;
+}
+.tablebtn{
+    text-align: center;
+   
+   
+}
+.tbtn1{
+    text-transform:capitalize;
+    padding: 5px 70px;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 5px;
+    background-color:  #DFDCE3;
+    
+}
+.tbtn1:hover{
+    color: aliceblue;
+    background-color: #0049B7 ; 
+    font-weight: bolder;
+}
+.t-head{
+    text-transform:capitalize;
+}
+.pagi-div button{
+    display:inline;
+    margin: 0px 18px;
+    padding: 0px 20px;
+    border: none;
+    background-color: #fff;
+   
+}
+.pagi-div button:hover{
+    color: aliceblue;
+    background-color: #393939 ; 
+    border-radius:30%;
+    
+}
+.pagi-div{
+    box-shadow: 2px 2px 10px rgb(163, 160, 160);
+    padding: 6px 0px;
+    /* padding-right: 100%; */
+
+    margin-bottom: 10px;
+}
+.input-field p{
+    color: red;
+    margin-right: 490px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+/* for finding button results */
+.finding{
+border-radius: 3px;
+margin: 10px 0px;
+list-style-type: none;
+padding: 0.5px 0px;
+background-color:#fff;
+box-shadow: 2px 2px 10px rgb(163, 160, 160);
+}
+.finding li{
+    text-transform: capitalize;
+    margin: 30px 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    color:#393939;
+    box-shadow: 0px -2px 10px rgb(163, 160, 160);
+   background-color: #d4efed;
+   
+    padding-top: 10px;
+    padding-left: 50px;
+    margin: 18px 40px;
+    display:flex;
+    font-weight: 400;
+    
+
+}
+
+.finding p{
+    margin-left: 10px;
+    font-weight: 600;
+}
+table{
+    border: 1px solid;
+}
+.t-head{
+    background-color: #393939;
+    color: aliceblue;
+}
+.t-body{
+    background-color: #DFDCE3;
+    
+}
+table td{
+    border: 1px solid #393939;
+}
+/* second design of table click button */
+.tbtn2{
+    background-color:#d4efed;
+    text-transform:capitalize;
+    padding: 5px 70px;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-radius: 5px;
+   
+}
+.tbtn2:hover{
+    background-color:aliceblue;
+}
