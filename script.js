@@ -1,60 +1,79 @@
+
+let main = document.createElement("div")
+main.classList.add("main")
+document.body.append(main)
+// this desgin for the empty sapce
+let imgrow = document.createElement("div")
+imgrow.classList.add("row","empty")
+let imgdiv = document.createElement("div")
+imgdiv.classList.add("emptydiv","col-sm-12","offset-lg-3","col-lg-6")
+imgrow.append(imgdiv)
+let div = document.createElement("img")
+div.className="col-12"
+div.setAttribute("src","./img/vector search .jpg")
+imgdiv.append(div)
+document.body.append(imgrow)
+
 // bootstrap starts here
+
 var cont = document.createElement("div");
 cont.className = "container"
 // first head row BS
-var rowHead = document.createElement("div")
+let rowHead = document.createElement("div")
 rowHead.className = "row"
 cont.append(rowHead)
 
 // header of the page
-var head = document.createElement("div");
+let head = document.createElement("div");
 
-head.classList.add("col-12", "head")
+head.classList.add("col-sm-12","col-md-12", "head")
 rowHead.append(head)
 // h1 tag
-var h1 = document.createElement("h1");
+let h1 = document.createElement("h1");
 h1.innerText = "pokemon details";
 head.append(h1)
 // h1 span element
-var span = document.createElement("span");
+let span = document.createElement("span");
 span.innerText = "with-api"
 h1.append(span)
 // adding the container in body
-document.body.append(cont)
+main.append(cont)
 
 // input field to show pokemon details;
 // This second row of BS;
-var rowInput = document.createElement("div")
+let rowInput = document.createElement("div")
 rowInput.classList.add("row", "inputArea")
 rowInput.setAttribute("id","inputId")
 cont.append(rowInput)
 // input column BS;
 // input div class = input-field;
-var colInput = document.createElement("div")
-colInput.classList.add("col-sm-12","col-md-12","col-lg-10", "input-field");
+let colInput = document.createElement("div")
+colInput.classList.add("col-sm-12","col-md-8", "input-field");
+
 rowInput.append(colInput);
-var inputField = document.createElement("input");
+let inputField = document.createElement("input");
 inputField.setAttribute("placeholder", "Enter Pokemon Name")
 inputField.setAttribute("id", "inputField")
 
 colInput.append(inputField)
 // input field button
-var colBtn = document.createElement("div");
-colBtn.classList.add("col-2", "btn", "text-left");
+
+let colBtn = document.createElement("div");
+colBtn.classList.add("col-sm-12" ,"col-md-4", "btn", "text-left");
 rowInput.append(colBtn);
 
 // button creation
-var btn = document.createElement("button");
+let btn = document.createElement("button");
 btn.innerText = "find"
 btn.className = "bg-primary"
 btn.setAttribute("class", "find")
 btn.setAttribute("onclick", "find()")
 colBtn.append(btn)
 // break
-var br = document.createElement("br")
+let br = document.createElement("br")
 colBtn.append(br)
 
-var refresh = document.createElement("button");
+let refresh = document.createElement("button");
 refresh.innerText = "refresh♻️"
 refresh.className = "bg-primary"
 refresh.setAttribute("class", "refresh")
@@ -64,10 +83,10 @@ colBtn.append(refresh)
 
 // table  creation 
 var tablerow = document.createElement("div")
-tablerow.classList.add("row")
+tablerow.classList.add("row3")
 cont.append(tablerow)
 // table open button creation 
-var tablecol = document.createElement("div")
+var  tablecol = document.createElement("div")
 tablecol.classList.add("col-12", "tablebtn")
 tablerow.append(tablecol)
 
@@ -95,7 +114,7 @@ function bttn(num, val) {
 // table funtion to create the table
 // table row creation 
 var tablerow = document.createElement("div")
-tablerow.classList.add("row")
+tablerow.classList.add("row4")
 
 
 // table column 
@@ -108,17 +127,18 @@ mainTable.setAttribute("class", "table")
 
 
 // table t-head
-var thead = document.createElement("thead");
+let thead = document.createElement("thead");
 thead.className="t-head"
 mainTable.append(thead)
 
 cont.append(tablerow)
 // table t-body
-var tbody = document.createElement("tbody");
+let tbody = document.createElement("tbody");
 tbody.className = "t-body";
 
 mainTable.append(tbody)
 
+// pagination row creation 
 // pagination row creation 
 var pagirow = document.createElement("div")
 pagirow.classList.add("row")
@@ -168,21 +188,21 @@ async function tablefoo(a) {
 
         var res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
         var sum = await res.json();
-        console.log(sum)
+      
         var pokemon = sum.results[1].name;
         //for pokemon wight and ability and moves
           var assets = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
         var prop = await assets.json();
-        console.log(prop)
+       
         var ability = prop.abilities[0].ability.name
         var moves = prop.moves[0].move.name
         var wight = prop.weight
-        console.log(`name : ${pokemon}; ability:${ability}; moves: ${moves}; wight: ${wight};`)
+        imgdiv.style.display="none"
 
 
         let value = a + 5;
 
-        console.log(value)
+      
 
         for (var i = a; i < value; i++) {
             var pokemon = sum.results[i].name
@@ -197,15 +217,15 @@ async function tablefoo(a) {
         <td>${moves}</td>
         <td>${wight}</td>
         `
-            console.log("hello", i)
+    
            
         }
         if(i>6){
-            var pre = bttn("<--",i-10)
+            var pre = bttn("←",i-10)
             pagicol.prepend(pre)
            }
         cont.append(pagirow)
-        var nxt = bttn("-->",i)
+        var nxt = bttn("→",i)
         var btn2 = bttn(2, 6)
         var btn3 = bttn(3, 11)
         var btn4 = bttn(4, 16)
@@ -226,11 +246,13 @@ async function tablefoo(a) {
 }
 var p = document.createElement("p")
 
+
+
        
 // for search option 
 var findrow = document.createElement("div")
-findrow.className = "row"
-var findcol = document.createElement("div")
+findrow.className = "row5"
+let findcol = document.createElement("div")
 findcol.classList.add("col-12", "find-area")
 findrow.append(findcol)
 // if invalid name 
@@ -246,15 +268,13 @@ async function find() {
    
     
     try {
-
+     
         var res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
-        var sum = await res.json();
-        console.log(sum)
-        var fin = inputField.value.toString()
-        var pokemon = "charmeleon";
-        console.log("name",pokemon)
+        let sum = await res.json();
+        let fin = inputField.value.toString()
+
         //for pokemon wight and ability and moves
-          var assets = await fetch(`https://pokeapi.co/api/v2/pokemon/${fin}`)
+        var assets = await fetch(`https://pokeapi.co/api/v2/pokemon/${fin}`)
         var prop = await assets.json();
         console.log(prop)
         var ability = prop.abilities[0].ability.name
@@ -271,15 +291,16 @@ async function find() {
 <li class = li>pokemon weight : <p>${wight}</p></li>
 <li class = li>pokemon ability: <p>${ability}</p></li>
 </ul>`
+imgdiv.style.display="none"
 inputField.value=""
     } catch (error) {
         p.innerText="please enter valid name"
         colInput.append(p)
-        console.log("heelll")
     }
 }
 
 function Refresh(){
+    imgdiv.style.display="block"
     tablebtn.className="tbtn1"
     inputField.value=""
 
