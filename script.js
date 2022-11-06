@@ -10,7 +10,8 @@ imgdiv.classList.add("emptydiv","col-sm-12","offset-lg-3","col-lg-6")
 imgrow.append(imgdiv)
 let div = document.createElement("img")
 div.className="col-12"
-div.setAttribute("src","./img/vector search .jpg")
+div.setAttribute("src","./vector search .jpg")
+div.setAttribute("alt","search image")
 imgdiv.append(div)
 document.body.append(imgrow)
 
